@@ -7,7 +7,7 @@
 
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>ff58acd7-9bca-4ead-b08c-c622f5030eef</ProjectGuid>
+    <ProjectGuid>99e3b50d-572d-41a9-98a2-a615d834b90e</ProjectGuid>
     <RootNamespace>DynamoDbExample</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
