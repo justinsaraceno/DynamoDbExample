@@ -31,11 +31,10 @@ namespace DevGuideSample
                     _configuration["aws:secretAccessKey"],
                     RegionEndpoint.GetBySystemName(_configuration["aws:region"]));
 
-                //DeleteAllTables(client);
-                //DeleteTable("ProductCatalog");
-                //DeleteTable("Forum");
-                //DeleteTable("Thread");
-                //DeleteTable("Reply");
+                DeleteTable("ProductCatalog");
+                DeleteTable("Forum");
+                DeleteTable("Thread");
+                DeleteTable("Reply");
 
                 // Create tables (using the AWS SDK for .NET low-level API).
                 CreateTableProductCatalog();
@@ -69,9 +68,9 @@ namespace DevGuideSample
                 var deleteTableResponse = client.DeleteTableAsync(new DeleteTableRequest() { TableName = tableName }).Result;
                 WaitTillTableDeleted(client, tableName, deleteTableResponse);
             }
-            catch (ResourceNotFoundException)
+            catch (Exception)
             {
-                // There is no such table. 
+                // table doesn't exist
             }
         }
 
